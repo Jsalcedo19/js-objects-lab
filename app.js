@@ -74,11 +74,12 @@ Exercise 5
 
 Solve Exercise 5 here:
 */
+//these functions find the 3 pokemons I want to include to my party
 const Charmander = pokemon.find(poke => poke.name === "Charmander");
 const Bulbasaur = pokemon.find(poke => poke.name === "Bulbasaur");
 const Pikachu = pokemon.find(poke => poke.name === "Pikachu");
 
-game.party.push(Charmander, Bulbasaur, Pikachu);
+game.party.push(Charmander, Bulbasaur, Pikachu); //this .push method picks the 3 pokemon from the data and into my party
 
 console.log("Exercise 5 result:",game.party);
 
@@ -92,9 +93,32 @@ Solve Exercise 6 here:
 */
 
 game.gyms.forEach(gym => { //this function calls the gyms array looks into every gym
-  if (gym.difficulty < 3){ //this statement tells you to only 
+  if (gym.difficulty < 3){ //this statement tells you that only the gyms below difficulty 3 will be true
     gym.completed = true
   } 
 });
 
 console.log("exercise 6 Result:",game.gyms);
+
+/*
+Exercise 7
+1. Evolve the starter Pokémon you added to your party earlier. Each starter Pokémon evolves into a specific one.
+2. How would you replace the current starter Pokémon in your party with its evolved form?
+
+Hint: 
+  - Pokemon 1: Bulbasaur evolves into Pokemon 2: Ivysaur
+  - Pokemon 4: Charmander evolves into Pokemon 5: Charmeleon
+  - Pokemon 7: Squirtle evolves into Pokemon 8: Wartortle
+  - Pokemon 25: Pikachu evolves into Pokemon 26: Raichu
+
+More Hints: The existing starter Pokemon will be *replaced* in your party with the Pokemon it evolved into. When working with an array of objects, the splice() array method is ideal for replacing one element with another. 
+
+
+Solve Exercise 7 here:
+*/
+//these functions find the evolved version of the starter pokemon.
+const Wartortle = pokemon.find(poke => poke.name === "Wartortle");
+
+game.party.splice(0,1,Wartortle) // the splice method removes squirtle from party array and replaces it with wartortle
+
+console.log(game.party)
