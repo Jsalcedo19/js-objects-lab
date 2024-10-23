@@ -178,8 +178,15 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 11 here:
 */
-
-
+game.catchPokemon = function(pokemonObj) {
+  game.party.push(pokemonObj);
+    let pokeballItem = game.items.find((entry) => entry.name ==="pokeball");
+      pokeballItem.quantity -= 1;
+    
+}
+let Psyduck = pokemon.find(poke => poke.name === "Psyduck");
+game.catchPokemon(Psyduck);
+console.log(game.items);
 /*
 Exercise 12
 1. Similar to Exercise 6, now complete gyms with a difficulty below 6. How will you approach this?
