@@ -16,8 +16,7 @@ const game = {
     { name: "potion", quantity: 4 },
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
-  ]
-
+  ],
 };
 console.dir(pokemon, { maxArrayLength: null });
 
@@ -28,30 +27,30 @@ console.dir(pokemon, { maxArrayLength: null });
 // number - 1
 
 // Answer easy
-console.log(pokemon[58])
+console.log(pokemon[58]);
 
 // Answer medium
-// Doesn't work if data set gets modified below the number 
+// Doesn't work if data set gets modified below the number
 // you're looking for
-const getPokemon = (pokemon) => pokemon.number === 59
-const pokemonToFind = pokemon.findIndex(getPokemon)
-console.log(pokemon[pokemonToFind].name)
+const getPokemon = (pokemon) => pokemon.number === 59;
+const pokemonToFind = pokemon.findIndex(getPokemon);
+console.log(pokemon[pokemonToFind].name);
 
 // Answer hard
 // TODO maybe use indexOf?
 const findPokemonByNumber = (num) => {
-  const idx = pokemon.findIndex((pokeman) => pokeman.number === num)
-  return pokemon[idx]
-}
-console.log(typeof(findPokemonByNumber))
-console.log(findPokemonByNumber(59).name)
-console.log(findPokemonByNumber(132).name)
+  const idx = pokemon.findIndex((pokeman) => pokeman.number === num);
+  return pokemon[idx];
+};
+console.log(typeof findPokemonByNumber);
+console.log(findPokemonByNumber(59).name);
+console.log(findPokemonByNumber(132).name);
 
 //exercise 2:
 console.log(game);
 
 // Exercise 3: add a new property called difficulty and give it a value"easy".
-game.difficulty = "easy"; 
+game.difficulty = "easy";
 console.log(game);
 
 /*
@@ -63,8 +62,8 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-game.party.push(findPokemonByNumber(7))
-console.log(game.party)
+game.party.push(findPokemonByNumber(7));
+console.log(game.party);
 
 /*
 Exercise 5
@@ -75,13 +74,13 @@ Exercise 5
 Solve Exercise 5 here:
 */
 //these functions find the 3 pokemons I want to include to my party
-const Charmander = pokemon.find(poke => poke.name === "Charmander");
-const Bulbasaur = pokemon.find(poke => poke.name === "Bulbasaur");
-const Pikachu = pokemon.find(poke => poke.name === "Pikachu");
+const Charmander = pokemon.find((poke) => poke.name === "Charmander");
+const Bulbasaur = pokemon.find((poke) => poke.name === "Bulbasaur");
+const Pikachu = pokemon.find((poke) => poke.name === "Pikachu");
 
 game.party.push(Charmander, Bulbasaur, Pikachu); //this .push method picks the 3 pokemon from the data and into my party
 
-console.log("Exercise 5 result:",game.party);
+console.log("Exercise 5 result:", game.party);
 
 /*
 Exercise 6
@@ -92,13 +91,15 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-game.gyms.forEach(gym => { //this function calls the gyms array looks into every gym
-  if (gym.difficulty < 3){ //this statement tells you that only the gyms below difficulty 3 will be true
-    gym.completed = true
-  } 
+game.gyms.forEach((gym) => {
+  //this function calls the gyms array looks into every gym
+  if (gym.difficulty < 3) {
+    //this statement tells you that only the gyms below difficulty 3 will be true
+    gym.completed = true;
+  }
 });
 
-console.log("exercise 6 Result:",game.gyms);
+console.log("exercise 6 Result:", game.gyms);
 
 /*
 Exercise 7
@@ -117,8 +118,19 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 7 here:
 */
 //this functions find the evolved version of the starter pokemon.
-const Wartortle = pokemon.find(poke => poke.name === "Wartortle");
+const Wartortle = pokemon.find((poke) => poke.name === "Wartortle");
 
-game.party.splice(0,1,Wartortle); // the splice method removes squirtle from party array and replaces it with wartortle
+game.party.splice(0, 1, Wartortle); // the splice method removes squirtle from party array and replaces it with wartortle
 
 console.log(game.party);
+
+/*
+Exercise 8
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 8 here:
+*/
+
+//goes through the party array and prints out each pokemon name
+game.party.forEach(pokemon => { console.log(pokemon.name)});
