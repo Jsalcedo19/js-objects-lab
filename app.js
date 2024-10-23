@@ -116,9 +116,9 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 
 Solve Exercise 7 here:
 */
-//these functions find the evolved version of the starter pokemon.
+//this functions find the evolved version of the starter pokemon.
 const Wartortle = pokemon.find(poke => poke.name === "Wartortle");
 
-game.party.splice(0,1,Wartortle) // the splice method removes squirtle from party array and replaces it with wartortle
+game.party.splice(0,1,Wartortle); // the splice method removes squirtle from party array and replaces it with wartortle
 
-console.log(game.party)
+console.log(game.party);
