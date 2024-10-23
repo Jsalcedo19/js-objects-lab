@@ -90,3 +90,11 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
+
+game.gyms.forEach(gym => { //this function calls the gyms array looks into every gym
+  if (gym.difficulty < 3){ //this statement tells you to only 
+    gym.completed = true
+  } 
+});
+
+console.log("exercise 6 Result:",game.gyms);
