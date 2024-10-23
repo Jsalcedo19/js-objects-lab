@@ -63,5 +63,30 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-game.party.push(findPokemonByNumber(1))
+game.party.push(findPokemonByNumber(7))
 console.log(game.party)
+
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+const Charmander = pokemon.find(poke => poke.name === "Charmander");
+const Bulbasaur = pokemon.find(poke => poke.name === "Bulbasaur");
+const Pikachu = pokemon.find(poke => poke.name === "Pikachu");
+
+game.party.push(Charmander, Bulbasaur, Pikachu);
+
+console.log("Exercise 5 result:",game.party);
+
+/*
+Exercise 6
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
+
+
+Solve Exercise 6 here:
+*/
