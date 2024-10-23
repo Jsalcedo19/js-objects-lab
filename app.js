@@ -18,4 +18,30 @@ const game = {
       { name: "rare candy", quantity: 99 },
     ],
   }
-  
+  console.dir(pokemon, {maxArrayLength: null});
+
+  // Objects lab question 1 answer
+
+// Find the index of the pokemon with number 59
+// Hint: the numbers are non-indexed, so the index might be
+// number - 1
+
+// Answer easy
+console.log(pokemon[58])
+
+// Answer medium
+// Doesn't work if data set gets modified below the number 
+// you're looking for
+const getPokemon = (pokemon) => pokemon.number === 59
+const pokemonToFind = pokemon.findIndex(getPokemon)
+console.log(pokemon[pokemonToFind].name)
+
+// Answer hard
+// TODO maybe use indexOf?
+const findPokemonByNumber = (num) => {
+  const idx = pokemon.findIndex((pokeman) => pokeman.number === num)
+  return pokemon[idx]
+}
+
+console.log(findPokemonByNumber(59).name)
+console.log(findPokemonByNumber(132).name)
