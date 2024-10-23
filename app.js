@@ -194,8 +194,14 @@ Exercise 12
 
 Solve Exercise 12 here:
 */
-
-
+game.gyms.forEach((gym) => {
+  //this function calls the gyms array looks into every gym
+  if (gym.difficulty < 6) {
+    //this statement tells you that only the gyms below difficulty 6 will be true
+    gym.completed = true;
+  }
+});
+console.log(game.gyms);
 /*
 Exercise 13
 1. Create a `gymStatus` method in `game` to tally completed and incomplete gyms.
@@ -218,7 +224,7 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 
 Solve Exercise 13 here:
 */
-
+game.gymStatus = const gymTally()
 
 /*
 Exercise 14
