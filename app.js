@@ -16,9 +16,7 @@ const game = {
     { name: "potion", quantity: 4 },
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
-  ],
-  // Exercise 3: add a new property called difficulty and give it a value"easy".
-  difficulty: "esasy", 
+  ]
 
 };
 console.dir(pokemon, { maxArrayLength: null });
@@ -30,23 +28,40 @@ console.dir(pokemon, { maxArrayLength: null });
 // number - 1
 
 // Answer easy
-console.log(pokemon[58]);
+console.log(pokemon[58])
 
 // Answer medium
-// Doesn't work if data set gets modified below the number
+// Doesn't work if data set gets modified below the number 
 // you're looking for
-const getPokemon = (pokemon) => pokemon.number === 59;
-const pokemonToFind = pokemon.findIndex(getPokemon);
-console.log(pokemon[pokemonToFind].name);
+const getPokemon = (pokemon) => pokemon.number === 59
+const pokemonToFind = pokemon.findIndex(getPokemon)
+console.log(pokemon[pokemonToFind].name)
 
 // Answer hard
 // TODO maybe use indexOf?
 const findPokemonByNumber = (num) => {
-  const idx = pokemon.findIndex((pokeman) => pokeman.number === num);
-  return pokemon[idx];
-};
+  const idx = pokemon.findIndex((pokeman) => pokeman.number === num)
+  return pokemon[idx]
+}
+console.log(typeof(findPokemonByNumber))
+console.log(findPokemonByNumber(59).name)
+console.log(findPokemonByNumber(132).name)
 
-console.log(findPokemonByNumber(59).name);
-console.log(findPokemonByNumber(132).name);
 //exercise 2:
 console.log(game);
+
+// Exercise 3: add a new property called difficulty and give it a value"easy".
+game.difficulty = "easy"; 
+console.log(game);
+
+/*
+Exercise 4
+1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
+2. Add this Pokémon to the `game.party` array. Which array method will you use to add them?
+
+
+Solve Exercise 4 here:
+*/
+
+game.party.push(findPokemonByNumber(1))
+console.log(game.party)
