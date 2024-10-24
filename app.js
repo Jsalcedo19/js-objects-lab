@@ -265,7 +265,14 @@ Exercise 15
 
 Solve Exercise 15 here:
 */
-
+game.gyms.forEach((gym) => {
+  //this function calls the gyms array looks into every gym
+  if (gym.difficulty < 8) {
+    //this statement tells you that only the gyms below difficulty 6 will be true
+    gym.completed = true;
+  }
+});
+console.log(game.gyms);
 /*
 Exercise 16
 1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
@@ -273,3 +280,4 @@ Exercise 16
 
 Solve Exercise 16 here:
 */
+console.log(game);
