@@ -231,15 +231,15 @@ the logged value would be: `{ completed: 5, incomplete: 3 }`.
 Solve Exercise 13 here:
 */
 const gymTally = { completed: 0, incomplete: 0 }; //creates the gymTally object with initial values
-game.gyms.forEach((gym) => { // loops through the gyms array
-if(gym.completed) {
-  gymTally.completed += 1; //increases completed count
-} else {
-  gymTally.incomplete += 1; //increases incompleted count
-}
-
+game.gyms.forEach((gym) => {
+  // loops through the gyms array
+  if (gym.completed) {
+    gymTally.completed += 1; //increases completed count
+  } else {
+    gymTally.incomplete += 1; //increases incompleted count
+  }
 });
-console.log(gymTally)
+console.log(gymTally);
 /*
 Exercise 14
 1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
@@ -251,6 +251,12 @@ This method should:
 
 Solve Exercise 14 here:
 */
+game.partyCount = function () {
+  let numberOfpokemon = game.party.length;
+  return numberOfpokemon;
+};
+
+console.log("number of Pokemon in Party:", game.partyCount());
 
 /*
 Exercise 15
