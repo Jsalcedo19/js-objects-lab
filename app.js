@@ -251,7 +251,7 @@ This method should:
 
 Solve Exercise 14 here:
 */
-game.partyCount = function () {
+game.partyCount = function() {
   let numberOfpokemon = game.party.length;
   return numberOfpokemon;
 };
